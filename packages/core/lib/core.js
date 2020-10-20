@@ -1,6 +1,10 @@
+'use strict';
+
 const admin = require('firebase-admin');
 const { normaliseBuild } = require('./utils/');
 const serviceKey = require('./serviceAccount.json');
+
+module.exports = sendBuild;
 
 function sendBuild(projectId, results) {
   const defaultApp = admin.initializeApp({
@@ -34,8 +38,3 @@ function sendBuild(projectId, results) {
       });
   })
 }
-
-module.exports = {
-  sendBuild,
-}
-
