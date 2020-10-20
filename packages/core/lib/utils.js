@@ -105,6 +105,6 @@ function isEmptyObjectorNull(value) {
 
 module.exports = {
   mount,
-  isEmptyObjectorNull,
   normaliseBuild,
+  isEmptyObjectorNull,
 }
