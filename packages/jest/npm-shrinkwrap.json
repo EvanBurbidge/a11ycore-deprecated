@@ -4,12 +4,19 @@
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
+    "@a11ycore/utils": {
+      "version": "file:../utils"
+    },
     "a11ycore-core": {
       "version": "file:../core",
       "requires": {
+        "@a11ycore/utils": "file:../utils",
         "firebase-admin": "^9.2.0"
       },
       "dependencies": {
+        "@a11ycore/utils": {
+          "version": "file:../utils"
+        },
         "@firebase/app-types": {
           "version": "0.6.1",
           "resolved": "https://registry.npmjs.org/@firebase/app-types/-/app-types-0.6.1.tgz",
