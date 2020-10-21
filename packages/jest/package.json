@@ -22,7 +22,8 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "rm -rf dist && babel lib -d dist --presets minify"
+    "build": "rm -rf dist && babel lib -d dist --presets minify",
+    "pretest": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
