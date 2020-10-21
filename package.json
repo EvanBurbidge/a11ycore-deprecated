@@ -6,7 +6,8 @@
     "test": "lerna exec npm run test",
     "link": "lerna link convert",
     "create": "lerna create",
-    "build": "lerna exec -- rm -rf dist && babel lib -d dist --presets minify"
+    "build:clean": "rm -rf packages/*/lib",
+    "build:lib": "npm run build:clean && node ./bin/build-package.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -19,13 +20,21 @@
     "@vue/server-test-utils": "^1.0.0-beta.31",
     "@vue/test-utils": "^1.0.0-beta.31",
     "babel-preset-minify": "^0.5.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "chalk": "^4.1.0",
+    "exorcist": "^1.0.1",
+    "glob": "^7.1.6",
     "jasmine": "^3.6.2",
     "jest": "^26.5.3",
     "jest-axe": "^4.0.0",
     "lerna": "^3.4.3",
+    "mkdirp": "^1.0.4",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "selenium-webdriver": "^4.0.0-alpha.7",
+    "tinyify": "^3.0.0",
+    "util": "^0.12.3",
     "vue": "^2.6.11",
     "vue-server-renderer": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
