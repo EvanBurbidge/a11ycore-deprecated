@@ -9,7 +9,10 @@
     "create": "lerna create",
     "clear": "lerna clean",
     "build:clean": "rm -rf packages/*/dist",
-    "build:lib": "npm run build:clean && node ./utils/build-lib.js"
+    "build:lib": "npm run build:clean && node ./utils/build-lib.js",
+    "patch": "lerna version patch",
+    "minor": "lerna version minor",
+    "major": "lerna version major"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
