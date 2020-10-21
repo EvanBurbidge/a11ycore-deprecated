@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "test": "lerna exec npm run test",
+    "test:jest": "lerna exec npm run test:jest",
+    "test:selenium": "lerna exec npm run test:selenium",
     "link": "lerna link convert",
     "create": "lerna create",
     "clear": "lerna clean",
@@ -40,11 +41,5 @@
     "vue": "^2.6.11",
     "vue-server-renderer": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
-  },
-  "dependencies": {
-    "@a11ycore/utils": "file:packages/utils",
-    "a11ycore-core": "file:packages/core",
-    "a11ycore-jest": "file:packages/jest",
-    "a11ycore-selenium": "file:packages/selenium"
   }
 }

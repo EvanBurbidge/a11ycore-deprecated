@@ -1,5 +1,5 @@
 {
-  "name": "a11ycore-jest",
+  "name": "@a11ycore/jest",
   "version": "0.0.0",
   "description": "the jest test runner for a11y",
   "author": "Evan.Burbidge <burbidge@tcd.ie>",
@@ -21,7 +21,8 @@
     "url": "git+https://github.com/EvanBurbidge/a11ycore-lerna.git"
   },
   "scripts": {
-    "test": "jest",
+    "test:jest": "jest",
+    "test:selenium": "echo 'no test here'",
     "build": "rm -rf dist && babel lib -d dist --presets minify",
     "pretest": "npm run build"
   },
@@ -30,7 +31,6 @@
   },
   "dependencies": {
     "@a11ycore/utils": "file:../utils",
-    "a11ycore-core": "file:../core",
     "axe-core": "^4.0.2",
     "lodash.merge": "^4.6.2"
   }
