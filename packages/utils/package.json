@@ -4,7 +4,7 @@
   "description": "utils package for all other packages",
   "author": "eburbidge <eburbidge@hubspot.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/utils.js",
   "directories": {
     "lib": "lib",

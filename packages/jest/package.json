@@ -4,7 +4,7 @@
   "description": "the jest test runner for a11y",
   "author": "Evan.Burbidge <burbidge@tcd.ie>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/jest.js",
   "directories": {
     "lib": "lib",

@@ -4,7 +4,7 @@
   "description": "> TODO: description",
   "author": "Evan.Burbidge <burbidge@tcd.ie>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/core.js",
   "directories": {
     "lib": "lib",

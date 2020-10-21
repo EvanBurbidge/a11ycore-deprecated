@@ -4,7 +4,7 @@
   "description": "the selenium testing helper for a11y",
   "author": "eburbidge <eburbidge@hubspot.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/selenium.js",
   "directories": {
     "lib": "lib",
