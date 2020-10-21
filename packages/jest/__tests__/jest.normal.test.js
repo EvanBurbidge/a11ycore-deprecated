@@ -1,4 +1,4 @@
-const runA11yJest = require("..");
+const { runA11yJest, configureA11yJest } = require("..");
 
 describe('jest-axe', () => {
   describe('axe', () => {
@@ -29,7 +29,7 @@ describe('jest-axe', () => {
      </html>
     `
 
-    const linkNameAxe = configureAxe({
+    const linkNameAxe = configureA11yJest({
       rules: {
         'link-name': { enabled: false }
       }
@@ -104,7 +104,7 @@ describe('jest-axe', () => {
       })
       expect(results.violations).toEqual([])
 
-      const configuredAxe = configureAxe({
+      const configuredAxe = configureA11yJest({
         rules: {
           'link-name': { enabled: false }
         }
@@ -124,160 +124,21 @@ describe('jest-axe', () => {
     })
   })
 
-  describe('toHaveNoViolations', () => {
-    const failingAxeResults = {
-      violations: [
-        {
-          id: 'image-alt',
-          impact: 'critical',
-          tags: [
-            'cat.text-alternatives',
-            'wcag2a',
-            'wcag111',
-            'section508',
-            'section508.22.a'
-          ],
-          description: 'Ensures <img> elements have alternate text or a role of none or presentation',
-          help: 'Images must have alternate text',
-          helpUrl: 'https://dequeuniversity.com/rules/axe/2.6/image-alt?application=axeAPI',
-          nodes: [
-            {
-              any: [
-                {
-                  id: 'has-alt',
-                  data: null,
-                  relatedNodes: [],
-                  impact: 'critical',
-                  message: 'Element does not have an alt attribute'
-                },
-                {
-                  id: 'aria-label',
-                  data: null,
-                  relatedNodes: [],
-                  impact: 'serious',
-                  message: 'aria-label attribute does not exist or is empty'
-                },
-                {
-                  id: 'aria-labelledby',
-                  data: null,
-                  relatedNodes: [],
-                  impact: 'serious',
-                  message: 'aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty or not visible'
-                },
-                {
-                  id: 'non-empty-title',
-                  data: null,
-                  relatedNodes: [],
-                  impact: 'serious',
-                  message: 'Element has no title attribute or the title attribute is empty'
-                },
-                {
-                  id: 'role-presentation',
-                  data: null,
-                  relatedNodes: [],
-                  impact: 'minor',
-                  message: 'Element\'s default semantics were not overridden with role="presentation"'
-                },
-                {
-                  id: 'role-none',
-                  data: null,
-                  relatedNodes: [],
-                  impact: 'minor',
-                  message: 'Element\'s default semantics were not overridden with role="none"'
-                }
-              ],
-              all: [],
-              none: [],
-              impact: 'critical',
-              html: '<img src="">',
-              target: [ 'body > img' ],
-              failureSummary: 'Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty or not visible\n  Element has no title attribute or the title attribute is empty\n  Element\'s default semantics were not overridden with role="presentation"\n  Element\'s default semantics were not overridden with role="none"'
-            }
-          ]
-        }
-      ]
-    }
 
-    const successfulAxeResults = {
-      violations: []
-    }
-    it('returns a jest matcher object with object', () => {
-      const matcherFunction = toHaveNoViolations.toHaveNoViolations
-      expect(matcherFunction).toBeDefined()
-      expect(typeof matcherFunction).toBe('function')
-    })
-
-    it('throws error if non axe results object is passed', () => {
-      const matcherFunction = toHaveNoViolations.toHaveNoViolations
-      expect(() => {
-        matcherFunction({})
-      }).toThrow('No violations found in aXe results object')
-    })
-
-    it('returns pass as true when no violations are present', () => {
-      const matcherFunction = toHaveNoViolations.toHaveNoViolations
-      const matcherOutput = matcherFunction(successfulAxeResults)
-      expect(matcherOutput.pass).toBe(true)
-    })
-
-    it('returns same violations that are passed in the results object', () => {
-      const matcherFunction = toHaveNoViolations.toHaveNoViolations
-      const matcherOutput = matcherFunction(failingAxeResults)
-      expect(matcherOutput.actual).toBe(failingAxeResults.violations)
-    })
-
-    it('returns correctly formatted message when violations are present', () => {
-      const matcherFunction = toHaveNoViolations.toHaveNoViolations
-      const matcherOutput = matcherFunction(failingAxeResults)
-      expect(typeof matcherOutput.message).toBe('function')
-      expect(matcherOutput.message()).toMatchSnapshot()
-    })
-
-    it('returns pass as false when violations are present', () => {
-      const matcherFunction = toHaveNoViolations.toHaveNoViolations
-      const matcherOutput = matcherFunction(failingAxeResults)
-      expect(matcherOutput.pass).toBe(false)
-    })
-
-    it('returns properly formatted text with more complex example', async () => {
-      const complexHtmlExample = `
-        <html>
-          <body>
-            <a href="#link-name"></a>
-            <a href="#link-name-2"></a>
-            <img src="http://example.com"/>
-            <img src="http://example.com/2"/>
-            <input type="text"/>
-          </body>
-        </html>
-      `
-      const results = await axe(complexHtmlExample)
-      const matcherFunction = toHaveNoViolations.toHaveNoViolations
-      const matcherOutput = matcherFunction(results)
-      expect(matcherOutput.message()).toMatchSnapshot()
-    })
-  })
   describe('readme', () => {
     describe('first readme example', () => {
-
-      expect.extend(toHaveNoViolations)
 
       it('should demonstrate this matcher`s usage', async () => {
         const render = () => '<img src="#"/>'
 
         // pass anything that outputs html to axe
         const html = render()
-
         const results = await axe(html)
-
-        expect(() => {
-          expect(results).toHaveNoViolations()
-        }).toThrowErrorMatchingSnapshot()
+        expect(results.violations.length).toBe(0);
       })
     })
     describe('readme axe config example', () => {
 
-      expect.extend(toHaveNoViolations)
 
       it('should demonstrate this matcher`s usage with a custom config', async () => {
         const render = () => `
@@ -297,26 +158,19 @@ describe('jest-axe', () => {
           }
         })
 
-        expect(results).toHaveNoViolations()
+        expect(results.violations.length).toBe(0)
       })
     })
     describe('readme axe global config example', () => {
       // Global helper file (axe-helper.js)
 
-      const configuredAxe = configureAxe({
+      const configuredAxe = configureA11yJest({
         rules: {
           // for demonstration only, don't disable rules that need fixing.
           'image-alt': { enabled: false },
           'region': { enabled: false }
         }
       })
-
-      const exportedAxe = configuredAxe
-
-      // Individual test file (test.js)
-      const axe = exportedAxe // require('./axe-helper.js')
-
-      expect.extend(toHaveNoViolations)
 
       it('should demonstrate this matcher`s usage with a default config', async () => {
         const render = () => `
@@ -327,14 +181,12 @@ describe('jest-axe', () => {
 
         // pass anything that outputs html to axe
         const html = render()
-
-        expect(await axe(html)).toHaveNoViolations()
+        const results = await runA11yJest(html);
+        expect(results.violations.length).toBe(0);
       })
     })
     describe('configure custom rule', () => {
       
-      expect.extend(toHaveNoViolations)
-
       it('should report custom rules', async () => {
 
         const check = {
@@ -362,7 +214,7 @@ describe('jest-axe', () => {
           },
         }
 
-        const configuredAxe = configureAxe({
+        const configuredAxe = configureA11yJest({
           globalOptions: {
             rules: [rule],
             checks: [check]

@@ -1,5 +1,5 @@
 {
-  "name": "@a11ycore/jest",
+  "name": "a11ycore-jest",
   "version": "0.0.0",
   "description": "the jest test runner for a11y",
   "author": "Evan.Burbidge <burbidge@tcd.ie>",

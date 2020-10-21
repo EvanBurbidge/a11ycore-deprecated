@@ -2,7 +2,7 @@
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
 
-const runA11yJest = require("../lib/jest");
+const { runA11yJest } = require("../lib/jest");
 
 describe("jest", () => {
   test("it should call the runA11yMethod", async () => {

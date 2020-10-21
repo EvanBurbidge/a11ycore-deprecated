@@ -1,4 +1,4 @@
-const runA11yJest = require("..");
+const {runA11yJest} = require("..");
 
 const Image = {
   data: () => ({ src: '#' }),
