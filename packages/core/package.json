@@ -31,5 +31,8 @@
   "dependencies": {
     "@a11ycore/utils": "file:../utils",
     "firebase-admin": "^9.2.0"
+  },
+  "peerDependencies": {
+    "@a11ycore/utils": "1.0.1"
   }
 }

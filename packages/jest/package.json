@@ -33,5 +33,8 @@
     "@a11ycore/utils": "file:../utils",
     "axe-core": "^4.0.2",
     "lodash.merge": "^4.6.2"
+  },
+  "peerDependencies": {
+    "@a11ycore/utils": "1.0.1"
   }
 }
