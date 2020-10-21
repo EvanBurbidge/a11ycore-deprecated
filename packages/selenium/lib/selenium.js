@@ -2,9 +2,9 @@
 const WebdriverJS = require('axe-webdriverjs');
 
 module.exports = {
-    selenium,
+    runA11ySelenium,
 };
 
-function selenium(driver, options) {
-    return new WebdriverJS(driver).configure(options).run();
+function runA11ySelenium(driver, options) {
+    return new WebdriverJS(driver).configure(options).analyze();
 }
