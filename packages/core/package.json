@@ -24,7 +24,6 @@
     "test": "echo \"Error: run tests from root\"",
     "test:selenium": "echo \"Error: run tests from root\"",
     "test:jest": "echo \"Error: run tests from root\""
-    
   },
   "bugs": {
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
