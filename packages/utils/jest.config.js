@@ -1,0 +1,6 @@
+const base = require('../../jest.config');
+
+module.exports = Object.assign({}, base, {
+  name: 'a11yutils',
+  displayName: 'a11yutils',
+})

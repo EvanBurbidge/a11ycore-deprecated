@@ -6,6 +6,7 @@
     "test": "lerna exec npm run test",
     "link": "lerna link convert",
     "create": "lerna create",
+    "clear": "lerna clean",
     "build:clean": "rm -rf packages/*/dist",
     "build:lib": "npm run build:clean && node ./bin/build-package.js",
     "postbuild:lib": "cp ./packages/core/lib/serviceAccount.json ./packages/core/dist/serviceAccount.json"
@@ -41,6 +42,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
+    "@a11ycore/utils": "file:packages/utils",
     "a11ycore-core": "file:packages/core",
     "a11ycore-jest": "file:packages/jest",
     "a11ycore-selenium": "file:packages/selenium"

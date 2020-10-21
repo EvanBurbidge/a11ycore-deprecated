@@ -1,17 +1,12 @@
 "use strict";
 
 const admin = require("firebase-admin");
+const { normaliseBuild } = require('@a11ycore/utils');
 const serviceKey = require("./serviceAccount.json");
-const { mount, normaliseBuild, isEmptyObjectOrNull } = require('./utils');
 
 module.exports = {
-  mount,
   sendBuild,
-  normaliseBuild,
-  isEmptyObjectOrNull,
 };
-
-
 
 function sendBuild(projectId, results) {
   const defaultApp = admin.initializeApp({
