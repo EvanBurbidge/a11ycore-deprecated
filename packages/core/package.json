@@ -29,10 +29,11 @@
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
   },
   "dependencies": {
-    "@a11ycore/utils": "file:../utils",
+    "@a11ycore/utils": "^1.0.1",
     "firebase-admin": "^9.2.0"
   },
   "peerDependencies": {
     "@a11ycore/utils": "1.0.1"
-  }
+  },
+  "gitHead": "5d99c6ad3d7e8408b2efa8f509a2d6132b4b5242"
 }

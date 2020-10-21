@@ -26,5 +26,6 @@
   },
   "dependencies": {
     "axe-webdriverjs": "^2.3.0"
-  }
+  },
+  "gitHead": "5d99c6ad3d7e8408b2efa8f509a2d6132b4b5242"
 }

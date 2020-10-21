@@ -30,11 +30,12 @@
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
   },
   "dependencies": {
-    "@a11ycore/utils": "file:../utils",
+    "@a11ycore/utils": "^1.0.1",
     "axe-core": "^4.0.2",
     "lodash.merge": "^4.6.2"
   },
   "peerDependencies": {
     "@a11ycore/utils": "1.0.1"
-  }
+  },
+  "gitHead": "5d99c6ad3d7e8408b2efa8f509a2d6132b4b5242"
 }
