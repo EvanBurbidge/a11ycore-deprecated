@@ -1,7 +1,7 @@
 "use strict";
 const axeCore = require("axe-core");
 const merge = require('lodash.merge');
-const { mount } = require("a11ycore-core/src/core");
+const { mount } = require("a11ycore-core");
 
 module.exports = {
   runA11yJest,
