@@ -6,7 +6,7 @@
     "test": "lerna exec npm run test",
     "link": "lerna link convert",
     "create": "lerna create",
-    "build:clean": "rm -rf packages/*/lib",
+    "build:clean": "rm -rf packages/*/dist",
     "build:lib": "npm run build:clean && node ./bin/build-package.js"
   },
   "devDependencies": {
