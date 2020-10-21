@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "> TODO: description",
   "author": "Evan.Burbidge <burbidge@tcd.ie>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
@@ -29,7 +29,7 @@
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
   },
   "dependencies": {
-    "@a11ycore/utils": "^1.0.1",
+    "@a11ycore/utils": "^1.0.2",
     "firebase-admin": "^9.2.0"
   },
   "peerDependencies": {
