@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "test": "lerna exec test"
+    "test": "lerna exec test",
+    "link": "lerna link --force-local"
   },
   "devDependencies": {
     "lerna": "^3.4.3"
