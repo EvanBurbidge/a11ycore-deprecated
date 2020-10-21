@@ -51,27 +51,27 @@ describe('jest-axe', () => {
     })
 
     it('returns an axe results object', async () => {
-      const results = await axe(failingHtmlExample)
+      const results = await runA11yJest(failingHtmlExample)
       expect(typeof results).toBe('object')
       expect(typeof results.violations).toBe('object')
     })
 
     it('should not mutate the content of document.body permanently', async () => {
       const el = document.body.appendChild(document.createElement("div"))
-      await axe(goodHtmlExample)
+      await runA11yJest(goodHtmlExample)
       expect(document.body.childElementCount).toBe(1)
       expect(document.body.firstChild).toEqual(el)
     })
 
     it('returns violations for failing html example', async () => {
-      const results = await axe(failingHtmlExample)
+      const results = await runA11yJest(failingHtmlExample)
       const violation = results.violations[0]
       expect(violation.id).toBe('link-name')
       expect(violation.description).toBe('Ensures links have discernible text')
     })
 
     it('can ignore allowed failures', async () => {
-      const results = await axe(failingHtmlExample, {
+      const results = await runA11yJest(failingHtmlExample, {
         rules: {
           'link-name': { enabled: false }
         }
@@ -80,24 +80,24 @@ describe('jest-axe', () => {
     })
 
     it('returns no violations for a good html example', async () => {
-      const results = await axe(goodHtmlExample)
+      const results = await runA11yJest(goodHtmlExample)
       expect(results.violations).toEqual([])
     })
 
     it('throws if input is not a string, vue element, react element, or react testing library render', () => {
       expect(() => {
-        axe({})
+        runA11yJest({})
       }).toThrow('html parameter should be an HTML string or an HTML element')
     })
 
     it('throws with non-html input', () => {
       expect(() => {
-        axe('Hello, World')
+        runA11yJest('Hello, World')
       }).toThrow('html parameter ("Hello, World") has no elements')
     })
 
     it('should not mutate previous options', async () => {
-      let results = await axe(failingHtmlExample, {
+      let results = await runA11yJest(failingHtmlExample, {
         rules: {
           'link-name': { enabled: false }
         }
@@ -117,7 +117,7 @@ describe('jest-axe', () => {
       })
       expect(results.violations).toEqual([])
 
-      results = await axe(failingHtmlExample)
+      results = await runA11yJest(failingHtmlExample)
       const violation = results.violations[0]
       expect(violation.id).toBe('link-name')
       expect(violation.description).toBe('Ensures links have discernible text')
@@ -126,17 +126,7 @@ describe('jest-axe', () => {
 
 
   describe('readme', () => {
-    describe('first readme example', () => {
 
-      it('should demonstrate this matcher`s usage', async () => {
-        const render = () => '<img src="#"/>'
-
-        // pass anything that outputs html to axe
-        const html = render()
-        const results = await axe(html)
-        expect(results.violations.length).toBe(0);
-      })
-    })
     describe('readme axe config example', () => {
 
 
@@ -146,19 +136,18 @@ describe('jest-axe', () => {
             <img src="#"/>
           </div>
         `
-
         // pass anything that outputs html to axe
         const html = render()
 
-        const results = await axe(html, {
+        const results = await runA11yJest(html, {
           rules: {
             // for demonstration only, don't disable rules that need fixing.
             'image-alt': { enabled: false },
             'region': { enabled: false }
           }
-        })
+        });
 
-        expect(results.violations.length).toBe(0)
+        expect(results.violations).toEqual([])
       })
     })
     describe('readme axe global config example', () => {
@@ -182,7 +171,7 @@ describe('jest-axe', () => {
         // pass anything that outputs html to axe
         const html = render()
         const results = await runA11yJest(html);
-        expect(results.violations.length).toBe(0);
+        expect(results.violations.length).toBe(2);
       })
     })
     describe('configure custom rule', () => {

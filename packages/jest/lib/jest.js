@@ -1,6 +1,7 @@
 "use strict";
 const axeCore = require("axe-core");
-const { mount } = require("@a11ycore/core");
+const merge = require('lodash.merge');
+const { mount } = require("a11ycore-core");
 
 module.exports = {
   runA11yJest,
@@ -22,6 +23,7 @@ function configureA11yJest(config = {}) {
   const { globalOptions = {}, ...runnerOptions } = config
   axeCore.configure(globalOptions);
   return function(html = '', options = {}) {
-    return runA11yJest(html, Object.assign({}, options, runnerOptions));
+    const mergedOptions = merge({}, runnerOptions, options);
+    return runA11yJest(html, mergedOptions);
   }
 }
