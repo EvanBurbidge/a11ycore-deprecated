@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/jest",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "the jest test runner for a11y",
   "author": "Evan.Burbidge <burbidge@tcd.ie>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
