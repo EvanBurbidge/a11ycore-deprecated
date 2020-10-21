@@ -12,7 +12,6 @@ describe("test runA11ySelenium", () => {
   it('should test accessibility', async () => {
     await driver.get('http://www.google.com/ncr');
     const results = await runA11ySelenium(driver, {});
-    console.log(results);
     expect(typeof results).toBe('object');
     expect(Array.isArray(results.inapplicable)).toBe(true);
     expect(Array.isArray(results.violations)).toBe(true);

@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "test": "lerna exec test",
+    "test": "lerna exec npm run test",
     "link": "lerna link convert",
     "create": "lerna create",
     "build": "lerna exec -- rm -rf dist && babel lib -d dist --presets minify"
