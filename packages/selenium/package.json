@@ -26,9 +26,5 @@
   "dependencies": {
     "a11ycore-core": "file:../core",
     "axe-webdriverjs": "^2.3.0"
-  },
-  "devDependencies": {
-    "jasmine": "^3.6.2",
-    "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }

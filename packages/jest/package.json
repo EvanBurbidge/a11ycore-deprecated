@@ -5,13 +5,13 @@
   "author": "Evan.Burbidge <burbidge@tcd.ie>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "ISC",
-  "main": "lib/jest.js",
+  "main": "dist/jest.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "registry": "http://registry.npmjs.org/"
@@ -21,7 +21,8 @@
     "url": "git+https://github.com/EvanBurbidge/a11ycore-lerna.git"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rm -rf dist && babel lib -d dist --presets minify"
   },
   "bugs": {
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
