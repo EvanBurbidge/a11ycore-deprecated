@@ -9,8 +9,7 @@
     "create": "lerna create",
     "clear": "lerna clean",
     "build:clean": "rm -rf packages/*/dist",
-    "build:lib": "npm run build:clean && node ./bin/build-package.js",
-    "postbuild:lib": "cp ./packages/core/lib/serviceAccount.json ./packages/core/dist/serviceAccount.json"
+    "build:lib": "npm run build:clean && node ./utils/build-lib.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
