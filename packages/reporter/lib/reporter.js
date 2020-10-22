@@ -14,6 +14,7 @@ function reporter(projectId, apiKey, results) {
     }
     return new Promise((resolve, reject) => {
         const url = 'https://europe-west1-a11ycore.cloudfunctions.net/writeToProject';
+        console.log('reporting to a11ycore');
         axios(
             {
                 url,
