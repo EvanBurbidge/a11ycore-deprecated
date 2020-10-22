@@ -23,5 +23,10 @@
   },
   "bugs": {
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
+  },
+  "dependencies": {
+    "chrome-launcher": "^0.13.4",
+    "lighthouse": "^6.4.1",
+    "lodash.merge": "^4.6.2"
   }
 }
