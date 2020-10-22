@@ -1,5 +1,5 @@
 {
-  "name": "@a11ycore/root",
+  "name": "a11ycore-root",
   "private": true,
   "version": "1.0.0",
   "scripts": {
