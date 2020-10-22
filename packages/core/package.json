@@ -1,6 +1,7 @@
 {
   "name": "@a11ycore/core",
   "version": "1.0.3",
+  "private": true,
   "description": "> TODO: description",
   "author": "Evan.Burbidge <burbidge@tcd.ie>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
