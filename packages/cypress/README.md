@@ -73,7 +73,7 @@ it('Has no detectable a11y violations on load (custom configuration)', () => {
 
 ### cy.runA11yCypress
 
-This will run axe against the document at the point in which it is called. This means you can call this after interacting with your page and uncover accessibility issues introduced as a result of rendering in response to user actions.
+This will run axe against the document at the point in which it is called. This means you can call this after interacting with your page and uncover accessibility issues introduced as a result of rendering in response to user actions. It returns a promise which contains the results array of your a11y check
 
 #### Parameters on cy.runA11yCypress (axe.run)
 

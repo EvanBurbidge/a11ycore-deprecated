@@ -46,6 +46,3 @@ Refer to [Developing Axe-core Rules](https://github.com/dequelabs/axe-core/blob/
 - [aXe](https://www.deque.com/axe/) for the wonderful axe-core that makes it so easy to do this.
 - Government Digital Service for making coding in the open the default.
   - GOV.UK Publishing Frontend team who published the [basis of the aXe reporter](https://github.com/alphagov/govuk_publishing_components/blob/581c22c9d35d85d5d985571d007f6397a4399f4c/spec/javascripts/govuk_publishing_components/AccessibilityTestSpec.js)
-- [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot) for inspiration on README and repo setup
-
-[Jest]: https://jestjs.io/
