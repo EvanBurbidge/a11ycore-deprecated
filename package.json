@@ -13,7 +13,7 @@
     "patch": "lerna version patch",
     "minor": "lerna version minor",
     "major": "lerna version major",
-    "publish": "lerna publish"
+    "publish": "lerna publish from-git"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
