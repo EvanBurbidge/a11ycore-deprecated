@@ -1,6 +1,7 @@
 {
   "name": "@a11ycore/lighthouse",
   "version": "1.0.0",
+  "private": true,
   "description": "The lighthouse accessibility task runner for a11ycore",
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
