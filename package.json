@@ -50,7 +50,6 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
-    "@a11ycore/core": "file:packages/core",
     "@a11ycore/cypress": "file:packages/cypress",
     "@a11ycore/jest": "file:packages/jest",
     "@a11ycore/reporter": "file:packages/reporter",
