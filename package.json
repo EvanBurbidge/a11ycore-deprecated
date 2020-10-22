@@ -12,7 +12,8 @@
     "build:lib": "npm run build:clean && node ./utils/build-lib.js",
     "patch": "lerna version patch",
     "minor": "lerna version minor",
-    "major": "lerna version major"
+    "major": "lerna version major",
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -29,6 +30,7 @@
     "browserify": "^17.0.0",
     "chalk": "^4.1.0",
     "chromedriver": "^86.0.0",
+    "cypress": "^5.4.0",
     "exorcist": "^1.0.1",
     "glob": "^7.1.6",
     "jasmine": "^3.6.2",
@@ -47,7 +49,9 @@
   },
   "dependencies": {
     "@a11ycore/core": "file:packages/core",
+    "@a11ycore/cypress": "file:packages/cypress",
     "@a11ycore/jest": "file:packages/jest",
+    "@a11ycore/reporter": "file:packages/reporter",
     "@a11ycore/selenium": "file:packages/selenium",
     "@a11ycore/utils": "file:packages/utils"
   }

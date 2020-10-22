@@ -30,7 +30,7 @@
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
   },
   "dependencies": {
-    "@a11ycore/utils": "^1.0.2",
+    "@a11ycore/utils": "file:../utils",
     "firebase-admin": "^9.2.0"
   },
   "peerDependencies": {
