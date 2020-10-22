@@ -1,6 +1,7 @@
 {
   "name": "@a11ycore/root",
   "private": true,
+  "version": "1.0.0",
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "test:jest": "lerna exec npm run test:jest",
