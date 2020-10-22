@@ -2,7 +2,7 @@
   "name": "@a11ycore/selenium",
   "version": "1.0.0",
   "description": "the selenium testing helper for a11y",
-  "author": "eburbidge <eburbidge@hubspot.com>",
+  "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "MIT",
   "main": "dist/selenium.js",

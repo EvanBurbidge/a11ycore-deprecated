@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "> TODO: description",
-  "author": "Evan.Burbidge <burbidge@tcd.ie>",
+  "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "MIT",
   "main": "dist/core.js",

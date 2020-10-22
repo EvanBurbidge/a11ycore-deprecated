@@ -2,7 +2,7 @@
   "name": "@a11ycore/reporter",
   "version": "1.0.0",
   "description": "Sends http requests to the a11ycore backend  in order to report results",
-  "author": "eburbidge <eburbidge@hubspot.com>",
+  "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "ISC",
   "main": "dist/reporter.js",
