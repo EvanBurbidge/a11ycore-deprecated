@@ -2,7 +2,7 @@
   "name": "@a11ycore/cypress",
   "version": "1.1.0",
   "description": "the cypress package for working with a11y",
-  "private": false,
+  "private": true,
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "ISC",

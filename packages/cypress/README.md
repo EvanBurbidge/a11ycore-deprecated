@@ -181,7 +181,7 @@ it('Logs violations to the terminal', () => {
 })
 ```
 
-## A11Y Core
+## A11YCORE
 
 If you've not signed up already [A11Y core](https://a11ycore.com) allows for custom reporting and overviews of all accessibility issues. To report to it
 you can import our reporting tool from `@a11ycore/reporting`.
