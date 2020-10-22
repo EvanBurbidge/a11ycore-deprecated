@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/cypress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "the cypress package for working with a11y",
   "private": true,
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
