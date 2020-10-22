@@ -9,13 +9,13 @@ module.exports = {
     runA11yLighthouse,
 };
 
-function runA11yLighthouse(url = 'https://www.a11ycore.com', chromeFlags = [], options = {}) {
+function runA11yLighthouse(url = 'https://www.thewebuiguy.com/', chromeFlags = ['--headless'], options = {}) {
     return new Promise((resolve, reject) => {
         chromeLauncher.launch({
             chromeFlags,
         })
         .then(chrome => {
-            const opts = merge({}, options, {logLevel: 'info', output: 'json', onlyCategories: ['accesssibility'], port: chrome.port});
+            const opts = merge({}, options, {device: 'desktop', output: 'json',  onlyCategories: [], port: chrome.port});
             lighthouse(url, opts)
                 .then(results => {
                     resolve(results);
