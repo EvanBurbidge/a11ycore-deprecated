@@ -28,5 +28,10 @@
   },
   "dependencies": {
     "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "@a11ycore/jest": "file:../jest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
