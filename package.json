@@ -1,6 +1,6 @@
 {
   "name": "a11ycore-root",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "scripts": {
     "bootstrap": "lerna bootstrap",

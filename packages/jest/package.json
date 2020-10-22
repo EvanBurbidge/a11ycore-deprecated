@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "the jest test runner for a11y",
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
-  "private": true,
+  "private": false,
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "MIT",
   "main": "dist/jest.js",
