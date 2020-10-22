@@ -9,18 +9,14 @@ module.exports = {
     runA11yLighthouse,
 };
 
-function runLighthouse (chrome, options) {
-    
-}
-
-function runA11yLighthouse(chromeFlags = [], options = {}) {
+function runA11yLighthouse(url = 'https://www.a11ycore.com', chromeFlags = [], options = {}) {
     return new Promise((resolve, reject) => {
         chromeLauncher.launch({
             chromeFlags,
         })
         .then(chrome => {
             const opts = merge({}, options, {logLevel: 'info', output: 'json', onlyCategories: ['accesssibility'], port: chrome.port});
-            lighthouse('http://www.google.com/ncr', opts)
+            lighthouse(url, opts)
                 .then(results => {
                     resolve(results);
                     chrome.kill();
@@ -30,3 +26,13 @@ function runA11yLighthouse(chromeFlags = [], options = {}) {
         .catch(err => reject(err));
     });
 }
+
+runA11yLighthouse()
+    .then(results => {
+        try {
+            const report = JSON.parse(results.report);
+            console.log(report);
+        } catch (e) {
+            console.log(e);
+        }
+    })
