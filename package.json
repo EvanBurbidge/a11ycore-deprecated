@@ -4,8 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "test:jest": "lerna exec npm run test:jest",
-    "test:selenium": "lerna exec npm run test:selenium",
+    "test": "lerna exec npm run test",
     "link": "lerna link convert",
     "create": "lerna create",
     "clear": "lerna clean",

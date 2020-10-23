@@ -3,9 +3,9 @@
 const { AxePuppeteer } = require('@axe-core/puppeteer');
 
 module.exports = {
-    puppeteer
+    runA11yPuppeteer
 };
 
-function puppeteer(page, options = {}) {
+function runA11yPuppeteer(page, options = {}) {
     return new AxePuppeteer(page).configure(options).analyze(); 
 }
