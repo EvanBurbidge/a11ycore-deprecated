@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/selenium",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "the selenium testing helper for a11y",
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
