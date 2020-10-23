@@ -1,1 +1,0 @@
-'use strict';const WebdriverJS=require("axe-webdriverjs");module.exports={runA11ySelenium};function runA11ySelenium(a,b){return new WebdriverJS(a).configure(b).analyze()}

@@ -48,12 +48,5 @@
     "vue": "^2.6.11",
     "vue-server-renderer": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
-  },
-  "dependencies": {
-    "@a11ycore/cypress": "file:packages/cypress",
-    "@a11ycore/jest": "file:packages/jest",
-    "@a11ycore/reporter": "file:packages/reporter",
-    "@a11ycore/selenium": "file:packages/selenium",
-    "@a11ycore/utils": "file:packages/utils"
   }
 }
