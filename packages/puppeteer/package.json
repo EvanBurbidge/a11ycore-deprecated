@@ -6,6 +6,7 @@
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "ISC",
   "main": "lib/puppeteer.js",
+  "keywords": ["selenium", "a11ycore", "a11y", "axe-core", "axe", "accessibility"],
   "directories": {
     "lib": "lib",
     "test": "__tests__"

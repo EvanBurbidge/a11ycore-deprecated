@@ -6,6 +6,7 @@
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "MIT",
   "main": "lib/selenium.js",
+  "keywords": ["selenium", "a11ycore", "a11y", "axe-core", "axe", "accessibility"],
   "private": false,
   "directories": {
     "lib": "lib",

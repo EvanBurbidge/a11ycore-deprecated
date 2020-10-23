@@ -6,6 +6,7 @@
   "private": false,
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "MIT",
+  "keywords": ["jest", "vue", "react", "enzyme", "a11ycore", "a11y", "axe-core", "axe", "accessibility"],
   "main": "lib/jest.js",
   "directories": {
     "lib": "lib",
