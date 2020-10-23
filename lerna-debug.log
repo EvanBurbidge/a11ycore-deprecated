@@ -2,7 +2,7 @@
 61 error Error: Command failed: git tag @a11ycore/jest@1.3.0 -m @a11ycore/jest@1.3.0
 61 error fatal: tag '@a11ycore/jest@1.3.0' already exists
 61 error
-61 error     at makeError (/Users/eburbidge/Desktop/dev/a11ycore-lerna/node_modules/@lerna/child-process/node_modules/execa/index.js:174:9)
-61 error     at /Users/eburbidge/Desktop/dev/a11ycore-lerna/node_modules/@lerna/child-process/node_modules/execa/index.js:278:16
+61 error     at makeError (/Users/eburbidge/Desktop/dev/a11ycore/node_modules/@lerna/child-process/node_modules/execa/index.js:174:9)
+61 error     at /Users/eburbidge/Desktop/dev/a11ycore/node_modules/@lerna/child-process/node_modules/execa/index.js:278:16
 61 error     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 61 error     at async Promise.all (index 0)

@@ -4,7 +4,7 @@
   "private": true,
   "description": "The lighthouse accessibility task runner for a11ycore",
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
-  "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
+  "homepage": "https://github.com/EvanBurbidge/a11ycore#readme",
   "license": "ISC",
   "main": "lib/lighthouse.js",
   "directories": {
@@ -16,13 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvanBurbidge/a11ycore-lerna.git"
+    "url": "git+https://github.com/EvanBurbidge/a11ycore.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\""
   },
   "bugs": {
-    "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
+    "url": "https://github.com/EvanBurbidge/a11ycore/issues"
   },
   "dependencies": {
     "chrome-launcher": "^0.13.4",
