@@ -6,7 +6,7 @@
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "ISC",
   "main": "dist/reporter.js",
-  "private": false,
+  "private": true,
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -26,10 +26,5 @@
   },
   "dependencies": {
     "axios": "^0.20.0"
-  },
-  "devDependencies": {
-    "@a11ycore/jest": "file:../jest",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
   }
 }

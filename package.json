@@ -16,6 +16,7 @@
     "publish": "lerna publish"
   },
   "devDependencies": {
+    "@a11ycore/jest": "file:../jest",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
@@ -38,13 +39,23 @@
     "jest-axe": "^4.0.0",
     "lerna": "^3.4.3",
     "mkdirp": "^1.0.4",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "puppeteer": "^5.3.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "selenium-webdriver": "^4.0.0-alpha.7",
     "tinyify": "^3.0.0",
     "util": "^0.12.3",
     "vue": "^2.6.11",
     "vue-server-renderer": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "@a11ycore/cypress": "file:packages/cypress",
+    "@a11ycore/jest": "file:packages/jest",
+    "@a11ycore/lighthouse": "file:packages/lighthouse",
+    "@a11ycore/puppeteer": "file:packages/puppeteer",
+    "@a11ycore/reporter": "file:packages/reporter",
+    "@a11ycore/selenium": "file:packages/selenium",
+    "@a11ycore/utils": "file:packages/utils"
   }
 }
