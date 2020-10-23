@@ -1,11 +1,11 @@
 {
   "name": "@a11ycore/selenium",
-  "version": "1.3.0",
+  "version": "1.2.0",
   "description": "the selenium testing helper for a11y",
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "MIT",
-  "main": "dist/selenium.js",
+  "main": "lib/selenium.js",
   "private": false,
   "directories": {
     "lib": "lib",
@@ -27,5 +27,5 @@
   "dependencies": {
     "@axe-core/webdriverjs": "^4.0.0"
   },
-  "gitHead": "2f49770170e35ddc78f2a1bf8dc761022afe8edc"
+  "gitHead": "2827e6c368e9fc9b864dcf1830d5b97d249f2ef1"
 }

@@ -1,11 +1,11 @@
 {
   "name": "@a11ycore/puppeteer",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "> TODO: description",
   "author": "eburbidge <eburbidge@hubspot.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "ISC",
-  "main": "dist/puppeteer.js",
+  "main": "lib/puppeteer.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -27,5 +27,5 @@
   "dependencies": {
     "@axe-core/puppeteer": "^4.0.0"
   },
-  "gitHead": "2f49770170e35ddc78f2a1bf8dc761022afe8edc"
+  "gitHead": "2827e6c368e9fc9b864dcf1830d5b97d249f2ef1"
 }

@@ -5,7 +5,7 @@
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "ISC",
-  "main": "dist/reporter.js",
+  "main": "lib/reporter.js",
   "private": true,
   "directories": {
     "lib": "lib",
