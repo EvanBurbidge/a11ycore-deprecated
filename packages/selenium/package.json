@@ -26,7 +26,7 @@
     "url": "https://github.com/EvanBurbidge/a11ycore-lerna/issues"
   },
   "dependencies": {
-    "axe-webdriverjs": "^2.3.0"
+    "@axe-core/webdriverjs": "^4.0.0"
   },
   "gitHead": "f94aac149809ee416ab6d6f884bde1f209ba3163"
 }

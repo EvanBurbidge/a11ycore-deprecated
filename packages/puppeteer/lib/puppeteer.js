@@ -1,7 +1,11 @@
 'use strict';
 
-module.exports = puppeteer;
+const { AxePuppeteer } = require('@axe-core/puppeteer');
 
-function puppeteer() {
-    // TODO
+module.exports = {
+    puppeteer
+};
+
+function puppeteer(page, options = {}) {
+    return new AxePuppeteer(page).configure(options).analyze(); 
 }

@@ -1,5 +1,5 @@
 'use strict';
-const WebdriverJS = require('axe-webdriverjs');
+const { WebdriverJS } = require('@axe-core/webdriverjs');
 
 module.exports = {
     runA11ySelenium,
