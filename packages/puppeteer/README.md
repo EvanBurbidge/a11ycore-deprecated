@@ -18,26 +18,24 @@ npm install --save-dev @a11ycore/puppeteer
 ## Usage:
 
 ```javascript
-const { Builder } = require('selenium-webdriver');
-const { runA11ySelenium } = require('@a11ycore/selenium');
+const puppeteer = require('puppeteer');
+const { runA11yPuppeteer } = require('@a11ycore/puppeteer');
 
-describe("test runA11ySelenium", () => {
-  let driver;
-  beforeAll(async() => {
-    driver = await new Builder().forBrowser('chrome').build();
+describe(() => {
+  it('should check the page for a11y' async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.setBypassCSP(true);
+
+    await page.goto('https://thewebuiguy.com');
+
+    const results = await runA11yPuppeteer(page);
+    console.log(results);
+
+    await page.close();
+    await browser.close();
   });
-  afterAll(() => {
-    driver.quit();
-  }) 
-  it('should test accessibility', async () => {
-    await driver.get('http://www.google.com/ncr');
-    const results = await runA11ySelenium(driver, {});
-    expect(typeof results).toBe('object');
-    expect(Array.isArray(results.inapplicable)).toBe(true);
-    expect(Array.isArray(results.violations)).toBe(true);
-    expect(results.testRunner.name).toEqual('axe');
-  });
-});
+}); 
 ```
 
 Refer to [Developing Axe-core Rules](https://github.com/dequelabs/axe-core/blob/master/doc/rule-development.md) for instructions on how to develop custom rules and checks.
