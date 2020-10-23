@@ -5,7 +5,7 @@
   "author": "eburbidge <eburbidge@hubspot.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "ISC",
-  "main": "lib/puppeteer.js",
+  "main": "dist/puppeteer.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

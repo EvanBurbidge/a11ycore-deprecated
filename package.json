@@ -13,7 +13,6 @@
     "patch": "lerna version patch",
     "minor": "lerna version minor",
     "major": "lerna version major",
-    "prepublish": "npm run build:lib",
     "publish": "lerna publish"
   },
   "devDependencies": {
