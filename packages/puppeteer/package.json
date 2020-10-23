@@ -26,5 +26,6 @@
   },
   "dependencies": {
     "@axe-core/puppeteer": "^4.0.0"
-  }
+  },
+  "gitHead": "2827e6c368e9fc9b864dcf1830d5b97d249f2ef1"
 }

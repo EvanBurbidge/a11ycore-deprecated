@@ -5,7 +5,7 @@
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
   "license": "MIT",
-  "main": "dist/utils.js",
+  "main": "lib/utils.js",
   "private": true,
   "directories": {
     "lib": "lib",
