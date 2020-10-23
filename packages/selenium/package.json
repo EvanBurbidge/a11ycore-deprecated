@@ -20,7 +20,10 @@
     "test": "__tests__"
   },
   "files": [
-    "dist"
+    "lib",
+    "README.md",
+    "package.json",
+    "package-lock.json"
   ],
   "repository": {
     "type": "git",

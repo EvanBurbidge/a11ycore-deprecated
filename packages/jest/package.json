@@ -23,7 +23,10 @@
     "test": "__tests__"
   },
   "files": [
-    "dist"
+    "lib",
+    "README.md",
+    "package.json",
+    "package-lock.json"
   ],
   "publishConfig": {
     "registry": "http://registry.npmjs.org/"
