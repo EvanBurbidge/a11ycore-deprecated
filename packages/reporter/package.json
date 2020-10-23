@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/reporter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Sends http requests to the a11ycore backend  in order to report results",
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore-lerna#readme",
