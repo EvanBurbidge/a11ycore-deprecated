@@ -29,6 +29,6 @@ function reporter(projectId, apiKey, results) {
                 resolve(response.data);
             }
         })
-        .catch(() => reject());
+        .catch(error => reject(error));
     });
 }
