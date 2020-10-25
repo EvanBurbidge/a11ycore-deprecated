@@ -1,16 +1,17 @@
-const puppeteer = require('puppeteer');
-const { runA11yPuppeteer } = require('..');
+const puppeteer = require("puppeteer");
+const { runA11yPuppeteer } = require("..");
 
-(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.setBypassCSP(true);
+describe('puppeteer', () => {
+  it('should run puppeteer', async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.setBypassCSP(true);
 
-  await page.goto('https://thewebuiguy.com');
+    await page.goto("https://thewebuiguy.com");
 
-  const results = await runA11yPuppeteer(page);
-  console.log(results);
+    await runA11yPuppeteer(page);
 
-  await page.close();
-  await browser.close();
-})();
+    await page.close();
+    await browser.close();
+  })
+});
