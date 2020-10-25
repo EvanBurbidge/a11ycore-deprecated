@@ -63,14 +63,13 @@ function isHTMLElement(html) {
     });
   }
   
-  function normaliseBuild(projectId, results, admin) {
+  function normaliseBuild(projectId, results) {
     let build = {
       projectId,
       severe: 0,
       issues: [],
       moderate: 0,
       status: 'PASSING',
-      created: admin.firestore.Timestamp.now(),
     };
     results.violations.forEach((result, idx) => {
       build.issues.push({
