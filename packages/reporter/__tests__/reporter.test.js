@@ -13,7 +13,6 @@ describe("jest", () => {
     const results = await runA11yJest(html)
     expect(results.violations.length).toBeGreaterThan(1);
     const formattedResults = normaliseBuild(results);
-    console.log(formattedResults)
     // await reporter('wsR4nYaVr8uAbW99E38Y', '82ba3e42-747b-463f-b21e-b55d21e44ebd', formattedResults);
   });
 });

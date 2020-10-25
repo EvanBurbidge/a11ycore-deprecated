@@ -38,7 +38,7 @@
     "jest-axe": "^4.0.0",
     "lerna": "^3.4.3",
     "mkdirp": "^1.0.4",
-    "puppeteer": "^5.3.1",
+    "puppeteer": "^5.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "selenium-webdriver": "^4.0.0-alpha.7",

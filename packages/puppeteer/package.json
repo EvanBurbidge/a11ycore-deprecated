@@ -29,7 +29,7 @@
     "url": "git+https://github.com/EvanBurbidge/a11ycore.git"
   },
   "scripts": {
-    "test": "jest"
+    "test": "echo 'no test for now'"
   },
   "private": false,
   "bugs": {
