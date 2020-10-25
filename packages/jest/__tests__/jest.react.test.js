@@ -9,6 +9,7 @@ describe("jest", () => {
     const element = React.createElement("img", { src: "#" });
     const html = ReactDOMServer.renderToString(element);
     const results = await runA11yJest(html)
+    console.log(JSON.stringify(results))
     expect(results.violations.length).toBeGreaterThan(1);
   });
 });
