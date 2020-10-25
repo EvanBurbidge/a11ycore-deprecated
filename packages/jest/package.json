@@ -44,12 +44,12 @@
     "url": "https://github.com/EvanBurbidge/a11ycore/issues"
   },
   "dependencies": {
-    "@a11ycore/utils": "file:../utils",
+    "@a11ycore/utils": "^1.5.2",
     "axe-core": "^4.0.2",
     "lodash.merge": "^4.6.2"
   },
   "peerDependencies": {
     "@a11ycore/utils": "1.0.1"
   },
-  "gitHead": "4f95ba64d10052bbe092b1d4185150de90aba536"
+  "gitHead": "e51e42cf6478acf533aff786e51574fe343c4cc2"
 }
