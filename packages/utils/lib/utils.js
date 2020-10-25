@@ -87,6 +87,7 @@ function isHTMLElement(html) {
           }
         }),
       });
+      console.log('build mapped');
       if (result.impact === 'critical') {
         build.severe = build.severe += 1;
       }
