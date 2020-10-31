@@ -70,6 +70,7 @@ function isHTMLElement(html) {
       issues: [],
       moderate: 0,
       status: 'PASSING',
+      normalized: true,
     };
     results.violations.forEach((result, idx) => {
       build.issues.push({

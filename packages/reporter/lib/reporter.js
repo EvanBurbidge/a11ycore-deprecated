@@ -14,6 +14,7 @@ function reporter(projectId, apiKey, results) {
     }
     return new Promise((resolve, reject) => {
         const url = 'https://europe-west1-a11ycore.cloudfunctions.net/writeToProject';
+        axios.defaults.adapter = require('axios/lib/adapters/http');
         axios(
             {
                 url,
@@ -22,6 +23,9 @@ function reporter(projectId, apiKey, results) {
                     apiKey,
                     results,
                     projectId,
+                },
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
                 },
             },
         ).then((response) => {
