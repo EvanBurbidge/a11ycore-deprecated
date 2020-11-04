@@ -63,14 +63,14 @@ function isHTMLElement(html) {
     });
   }
   
-  function normaliseBuild(projectId, results, admin) {
+  function normaliseBuild(projectId, results) {
     let build = {
       projectId,
       severe: 0,
       issues: [],
       moderate: 0,
       status: 'PASSING',
-      created: admin.firestore.Timestamp.now(),
+      normalized: true,
     };
     results.violations.forEach((result, idx) => {
       build.issues.push({
@@ -88,6 +88,7 @@ function isHTMLElement(html) {
           }
         }),
       });
+      console.log('build mapped');
       if (result.impact === 'critical') {
         build.severe = build.severe += 1;
       }

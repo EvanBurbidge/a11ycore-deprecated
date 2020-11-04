@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/puppeteer",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "The puppeteer test method for testing a11y",
   "author": "Evan Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore#readme",
@@ -29,7 +29,7 @@
     "url": "git+https://github.com/EvanBurbidge/a11ycore.git"
   },
   "scripts": {
-    "test": "node ./__tests__/puppeteer.test.js"
+    "test": "echo 'no test for now'"
   },
   "private": false,
   "bugs": {

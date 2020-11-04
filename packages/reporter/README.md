@@ -10,7 +10,9 @@ If you have not signed up for an account you will not be able to use this packag
 ```javascript
 const { runA11yJest } = require('@a11ycore/jest');
 const { reporter }  = require('@a11ycore/reporter');
+const { normaliseBuild } = require('@a11ycore/utils');
 
+// can be found in the details page of your a11ycore project
 const apiKey = process.env.A11Y_API_KEY;
 const projectId = process.env.PROJECT_ID
 
@@ -20,7 +22,8 @@ describe("jest", () => {
     const html = ReactDOMServer.renderToString(element);
     const results = await runA11yJest(html)
     expect(results.violations.length).toBeGreaterThan(1);
-    await reporter(projectId, apiKey, results); // you can then login to your a11ycore dashbaord to see results
+    const normalisedResults = normaliseBuild(projectId, results); // if not done your results will not process and may be rejected
+    await reporter(projectId, apiKey, normaliseBuild(projectId, results)); // you can then login to your a11ycore dashbaord to see results
   });
 });
 ```

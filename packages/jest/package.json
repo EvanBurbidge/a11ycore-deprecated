@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/jest",
-  "version": "1.6.0",
+  "version": "1.7.3",
   "description": "the jest test runner for a11y",
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "private": false,
@@ -44,12 +44,12 @@
     "url": "https://github.com/EvanBurbidge/a11ycore/issues"
   },
   "dependencies": {
-    "@a11ycore/utils": "^1.5.0",
+    "@a11ycore/utils": "^1.7.3",
     "axe-core": "^4.0.2",
     "lodash.merge": "^4.6.2"
   },
   "peerDependencies": {
     "@a11ycore/utils": "1.0.1"
   },
-  "gitHead": "2827e6c368e9fc9b864dcf1830d5b97d249f2ef1"
+  "gitHead": "6f3a6da1947d9f9a9bbc56011d36adc4e8f59f62"
 }
