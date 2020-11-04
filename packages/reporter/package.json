@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/reporter",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Sends http requests to the a11ycore backend  in order to report results",
   "author": "Evan.Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore#readme",
@@ -25,7 +25,7 @@
     "url": "https://github.com/EvanBurbidge/a11ycore/issues"
   },
   "dependencies": {
-    "@a11ycore/utils": "^1.8.1",
+    "@a11ycore/utils": "^1.8.2",
     "axios": "^0.20.0"
   },
   "gitHead": "832c965dfc1191cbcb8d0087bd64b9e09480b64f"
