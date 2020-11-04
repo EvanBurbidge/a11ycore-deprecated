@@ -48,7 +48,7 @@ function isHTMLElement(html) {
   
   
   function checkStatusOfBuild(build) {
-    if (build.severe === 0 || build.moderate === 0) {
+    if (build.severe === 0 && build.moderate === 0) {
       return Object.assign({}, build, {
         status: 'PASSING',
       });
