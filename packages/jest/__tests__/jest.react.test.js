@@ -7,6 +7,8 @@ const { runA11yJest } = require("../lib/jest");
 describe("jest", () => {
   test("it should call the runA11yMethod", async () => {
     const element = React.createElement("img", { src: "#" });
+    const elementTwo = React.createElement("p", {}, element);
+    const elementThree = React.createElement("div", {}, elementTwo);
     const html = ReactDOMServer.renderToString(element);
     const results = await runA11yJest(html)
     expect(results.violations.length).toBeGreaterThan(1);

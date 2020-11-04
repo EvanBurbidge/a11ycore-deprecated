@@ -6,7 +6,7 @@
   "homepage": "https://github.com/EvanBurbidge/a11ycore#readme",
   "license": "ISC",
   "main": "lib/reporter.js",
-  "private": true,
+  "private": false,
   "directories": {
     "lib": "lib",
     "test": "__tests__"
