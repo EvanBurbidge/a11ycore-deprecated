@@ -1,4 +1,7 @@
 # @a11ycore/reporter
+![npm](https://img.shields.io/npm/dt/@a11ycore/reporter)
+![version](https://img.shields.io/npm/v/@a11ycore/reporter)
+![NPM](https://img.shields.io/npm/l/@a11ycore/reporter)
 
 ## Description
 

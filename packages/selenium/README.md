@@ -1,4 +1,7 @@
 # @a11ycore/selenium
+![npm](https://img.shields.io/npm/dt/@a11ycore/selenium)
+![version](https://img.shields.io/npm/v/@a11ycore/selenium)
+![NPM](https://img.shields.io/npm/l/@a11ycore/selenium)
 
 <!-- [![npm version](https://img.shields.io/npm/v/jest-axe.svg)](http://npm.im/jest-axe)
 ![node](https://img.shields.io/node/v/jest-axe)
