@@ -1,4 +1,7 @@
 # `@a11ycore/utils`
+![npm](https://img.shields.io/npm/dt/@a11ycore/utils)
+![version](https://img.shields.io/npm/v/@a11ycore/utils)
+![NPM](https://img.shields.io/npm/l/@a11ycore/utils)
 
 The utils package is used by other packages to mount string / html elements and normalise data for our builds
 

@@ -1,6 +1,6 @@
 {
   "name": "@a11ycore/puppeteer",
-  "version": "1.6.1",
+  "version": "1.7.1",
   "description": "The puppeteer test method for testing a11y",
   "author": "Evan Burbidge <thewebuiguy@gmail.com>",
   "homepage": "https://github.com/EvanBurbidge/a11ycore#readme",
@@ -38,5 +38,5 @@
   "dependencies": {
     "@axe-core/puppeteer": "^4.0.0"
   },
-  "gitHead": "2827e6c368e9fc9b864dcf1830d5b97d249f2ef1"
+  "gitHead": "832c965dfc1191cbcb8d0087bd64b9e09480b64f"
 }
