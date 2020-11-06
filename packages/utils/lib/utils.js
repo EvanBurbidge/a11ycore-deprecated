@@ -69,6 +69,7 @@ function isHTMLElement(html) {
       severe: 0,
       issues: [],
       moderate: 0,
+      minor: 0,
       status: 'PASSING',
       normalized: true,
     };
@@ -94,6 +95,9 @@ function isHTMLElement(html) {
       }
       if (result.impact === 'moderate') {
         build.moderate = build.moderate += 1;
+      }
+      if (result.impact === 'minor') {
+        build.minor = build.minor += 1;
       }
     });
     return checkStatusOfBuild(build);
