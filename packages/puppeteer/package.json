@@ -38,5 +38,5 @@
   "dependencies": {
     "@axe-core/puppeteer": "^4.0.0"
   },
-  "gitHead": "832c965dfc1191cbcb8d0087bd64b9e09480b64f"
+  "gitHead": "3b0b8e8280ddea5dd19e5e64031bb1d906ef513b"
 }

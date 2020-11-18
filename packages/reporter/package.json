@@ -27,5 +27,6 @@
   "dependencies": {
     "@a11ycore/utils": "^1.8.4",
     "axios": "^0.20.0"
-  }
+  },
+  "gitHead": "3b0b8e8280ddea5dd19e5e64031bb1d906ef513b"
 }
