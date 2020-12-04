@@ -66,8 +66,9 @@ function isHTMLElement(html) {
   function normaliseBuild(projectId, results) {
     let build = {
       projectId,
-      severe: 0,
       issues: [],
+      critical: 0,
+      severe: 0,
       moderate: 0,
       minor: 0,
       status: 'PASSING',
@@ -91,6 +92,9 @@ function isHTMLElement(html) {
       });
       console.log('build mapped');
       if (result.impact === 'critical') {
+        build.critical = build.critical += 1;
+      }
+      if (result.impact === 'severe') {
         build.severe = build.severe += 1;
       }
       if (result.impact === 'moderate') {
