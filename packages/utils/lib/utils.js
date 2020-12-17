@@ -90,11 +90,10 @@ function isHTMLElement(html) {
           }
         }),
       });
-      console.log('build mapped');
       if (result.impact === 'critical') {
         build.critical = build.critical += 1;
       }
-      if (result.impact === 'severe') {
+      if (result.impact === 'serious') {
         build.severe = build.severe += 1;
       }
       if (result.impact === 'moderate') {
