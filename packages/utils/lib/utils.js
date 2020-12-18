@@ -48,14 +48,24 @@ function isHTMLElement(html) {
   
   
   function checkStatusOfBuild(build) {
-    if (build.severe === 0 && build.moderate === 0) {
+    if (build.serious === 0 && build.moderate === 0 && build.critical === 0 && build.minor === 0) {
       return Object.assign({}, build, {
         status: 'PASSING',
       });
     }
-    if (build.severe > build.moderate) {
+    if (build.critical > build.serious && build.critical > build.moderate && build.critical > build.minor) {
       return Object.assign({}, build, {
-        status: 'SEVERE',
+        status: 'CRITICAL',
+      });
+    }
+    if (build.serious > build.critical && build.serious > build.moderate && build.serious > build.minor) {
+      return Object.assign({}, build, {
+        status: 'SERIOUS',
+      });
+    }
+    if (build.minor > build.critical && build.minor > build.serious && build.minor > build.moderate) {
+      return Object.assign({}, build, {
+        status: 'MINOR',
       });
     }
     return Object.assign({}, build, {
@@ -68,7 +78,7 @@ function isHTMLElement(html) {
       projectId,
       issues: [],
       critical: 0,
-      severe: 0,
+      serious: 0,
       moderate: 0,
       minor: 0,
       status: 'PASSING',
@@ -94,7 +104,7 @@ function isHTMLElement(html) {
         build.critical = build.critical += 1;
       }
       if (result.impact === 'serious') {
-        build.severe = build.severe += 1;
+        build.serious = build.serious += 1;
       }
       if (result.impact === 'moderate') {
         build.moderate = build.moderate += 1;
