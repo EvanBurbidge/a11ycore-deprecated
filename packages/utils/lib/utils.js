@@ -46,7 +46,6 @@ function isHTMLElement(html) {
     throw new Error(`html parameter should be an HTML string or an HTML element`)
   }
   
-  
   function checkStatusOfBuild(build) {
     if (build.serious === 0 && build.moderate === 0 && build.critical === 0 && build.minor === 0) {
       return Object.assign({}, build, {

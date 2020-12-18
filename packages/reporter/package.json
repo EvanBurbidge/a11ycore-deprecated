@@ -25,7 +25,8 @@
     "url": "https://github.com/EvanBurbidge/a11ycore/issues"
   },
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "@a11ycore/utils": "^2.0.0"
   },
   "gitHead": "3b0b8e8280ddea5dd19e5e64031bb1d906ef513b"
 }
