@@ -78,6 +78,7 @@ function isHTMLElement(html) {
       issues: [],
       critical: 0,
       serious: 0,
+      severe: 0,
       moderate: 0,
       minor: 0,
       status: 'PASSING',
@@ -104,6 +105,7 @@ function isHTMLElement(html) {
       }
       if (result.impact === 'serious') {
         build.serious = build.serious += 1;
+        build.severe = build.severe += 1;
       }
       if (result.impact === 'moderate') {
         build.moderate = build.moderate += 1;
