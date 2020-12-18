@@ -52,19 +52,14 @@ function isHTMLElement(html) {
         status: 'PASSING',
       });
     }
-    if (build.critical > build.serious && build.critical > build.moderate && build.critical > build.minor) {
+    if (build.critical > 0) {
       return Object.assign({}, build, {
         status: 'CRITICAL',
       });
     }
-    if (build.serious > build.critical && build.serious > build.moderate && build.serious > build.minor) {
+    if (build.serious > build.moderate) {
       return Object.assign({}, build, {
         status: 'SERIOUS',
-      });
-    }
-    if (build.minor > build.critical && build.minor > build.serious && build.minor > build.moderate) {
-      return Object.assign({}, build, {
-        status: 'MINOR',
       });
     }
     return Object.assign({}, build, {
